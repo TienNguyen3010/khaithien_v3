@@ -33,11 +33,16 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-# 2) Cài Docker nếu chưa có
+# 2) Cài Docker (dockerd + daemon + compose plugin) nếu chưa có
 if ! command -v docker >/dev/null 2>&1; then
-  log "Đang cài đặt Docker..."
-  curl -fsSL https://get.docker.com | sh
-  systemctl enable --now docker
+  log "Đang cài đặt Docker (dockerd + compose)..."
+  if [[ -f deploy/install-docker.sh ]]; then
+    bash deploy/install-docker.sh
+  else
+    curl -fsSL https://get.docker.com | sh
+    systemctl enable --now docker
+    apt-get update -y && apt-get install -y docker-compose-plugin
+  fi
 else
   log "Docker đã có sẵn: $(docker -v)"
 fi
