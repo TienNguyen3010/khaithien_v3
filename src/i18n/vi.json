@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "projects": "Dự án",
+    "insights": "Góc nhìn",
+    "contact": "Liên hệ"
+  },
+  "cta": {
+    "primary": "Nhận tư vấn",
+    "secondary": "Xem dự án",
+    "viewProjects": "Xem dự án",
+    "viewCaseStudies": "Xem case study",
+    "readInsights": "Đọc bài viết",
+    "startProject": "Bắt đầu dự án",
+    "talkToTeam": "Trao đổi cùng đội ngũ"
+  },
+  "languageSwitcher": {
+    "label": "Ngôn ngữ",
+    "current": "Đang dùng tiếng Việt",
+    "switchTo": "Chuyển sang tiếng Anh"
+  },
+  "home": {
+    "heroEyebrow": "Communication & Entertainment",
+    "heroTitle": "Tư duy lớn. Thực thi tin cậy. Kết quả đo lường được.",
+    "heroBody": "Khải Thiên giúp thương hiệu kết nối khách hàng qua activation, sự kiện và truyền thông có bằng chứng.",
+    "trustStrip": "Đối tác tin cậy",
+    "servicesTitle": "Năng lực của chúng tôi",
+    "featuredProjectsTitle": "Dự án tiêu biểu",
+    "approachTitle": "Cách chúng tôi làm việc",
+    "insightsTitle": "Góc nhìn mới nhất",
+    "finalCtaTitle": "Sẵn sàng bắt đầu dự án của bạn?",
+    "finalCtaBody": "Hãy trao đổi để chúng tôi đề xuất hướng đi phù hợp."
+  },
+  "approach": {
+    "step1Title": "Thấu hiểu",
+    "step1Body": "Lắng nghe mục tiêu kinh doanh và bối cảnh thương hiệu.",
+    "step2Title": "Định hình",
+    "step2Body": "Thiết kế ý tưởng và kịch bản phù hợp với đối tượng.",
+    "step3Title": "Thực thi",
+    "step3Body": "Triển khai bài bản, kiểm soát chất lượng chặt chẽ.",
+    "step4Title": "Đo lường",
+    "step4Body": "Theo dõi kết quả và tối ưu dựa trên dữ liệu."
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "intro": "Hãy chia sẻ nhu cầu, chúng tôi sẽ phản hồi sớm nhất có thể.",
+    "name": "Họ và tên",
+    "company": "Công ty",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "service": "Dịch vụ quan tâm",
+    "message": "Nội dung yêu cầu",
+    "consent": "Tôi đồng ý với Chính sách quyền riêng tư",
+    "submit": "Gửi yêu cầu",
+    "submitting": "Đang gửi...",
+    "successTitle": "Yêu cầu đã được gửi",
+    "successBody": "Cảm ơn bạn. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.",
+    "errorTitle": "Chưa gửi được yêu cầu",
+    "errorBody": "Vui lòng kiểm tra lại thông tin hoặc thử lại sau.",
+    "required": "Trường này là bắt buộc",
+    "emailInvalid": "Email không hợp lệ",
+    "consentRequired": "Bạn cần đồng ý với chính sách quyền riêng tư"
+  },
+  "common": {
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFoundBody": "Trang bạn tìm kiếm không tồn tại hoặc chưa được xuất bản.",
+    "backHome": "Về trang chủ",
+    "translationNotice": "Bản dịch trang này chưa sẵn sàng. Bạn đang được đưa về trang chủ.",
+    "readMore": "Xem thêm",
+    "viewAll": "Xem tất cả"
+  },
+  "footer": {
+    "tagline": "Communication & Entertainment",
+    "contactTitle": "Liên hệ",
+    "legalTitle": "Pháp lý",
+    "privacy": "Chính sách quyền riêng tư",
+    "terms": "Điều khoản sử dụng",
+    "copyright": "© 2026 Khải Thiên Communication & Entertainment"
+  }
+}

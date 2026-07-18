@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"E:/Khai Thien Website/V3 Architecture\")",
+      "Read(//e/Khai Thien Website/V3 Architecture/**)",
+      "Bash(npm -v)",
+      "PowerShell(node -v)",
+      "PowerShell(npm -v)",
+      "PowerShell(gh --version)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\" -ErrorAction SilentlyContinue | Select-Object Name; where.exe node 2>&1; where.exe gh 2>&1)",
+      "PowerShell(winget --version)",
+      "PowerShell(winget install --id OpenJS.NodeJS.LTS -e --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); node -v; npm -v)",
+      "Bash(git config *)",
+      "Bash(git --version)",
+      "Bash(mkdir -p \"/e/Tien Finance/tien_finance/tien_finance/src/styles\" \"/e/Tien Finance/tien_finance/tien_finance/src/lib\" \"/e/Tien Finance/tien_finance/tien_finance/src/components/layout\")",
+      "Bash(cp \"/e/Tien Finance/tien_finance_dev/tien_finance/giao_dien_web/design-tokens.css\" \"/e/Tien Finance/tien_finance/tien_finance/src/styles/design-tokens.css\" && rm \"/e/Tien Finance/tien_finance/tien_finance/src/app/page.module.css\" && rm \"/e/Tien Finance/tien_finance/tien_finance/public/file.svg\" \"/e/Tien Finance/tien_finance/tien_finance/public/globe.svg\" \"/e/Tien Finance/tien_finance/tien_finance/public/next.svg\" \"/e/Tien Finance/tien_finance/tien_finance/public/vercel.svg\" \"/e/Tien Finance/tien_finance/tien_finance/public/window.svg\" && echo done)",
+      "PowerShell(Set-Location \"E:\\\\Tien Finance\\\\tien_finance\\\\tien_finance\"; $env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npm install @tabler/icons-react @supabase/supabase-js @supabase/ssr)",
+      "Bash(grep -n \"export.*{ Icon,\\\\|export.*\\\\bIcon\\\\b.*}\" node_modules/@tabler/icons-react/dist/tabler-icons-react.d.ts)",
+      "PowerShell(Set-Location \"E:\\\\Tien Finance\\\\tien_finance\\\\tien_finance\"; $env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npx tsc --noEmit)",
+      "PowerShell(Set-Location \"E:\\\\Tien Finance\\\\tien_finance\\\\tien_finance\"; $env:Path = [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"Path\",\"User\"\\); npx next build)"
+    ],
+    "additionalDirectories": [
+      "E:\\Tien Finance\\tien_finance\\tien_finance\\src",
+      "E:\\Tien Finance\\tien_finance_dev\\tien_finance\\giao_dien_web"
+    ]
+  }
+}

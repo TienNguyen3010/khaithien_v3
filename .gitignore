@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# Env (contains secrets — NEVER commit)
+.env
+.env.local
+.env.*.local
+
+# Disabled / broken admin scaffold (Payload 3.86 @payloadcms/next missing admin runtime)
+# Will be regenerated when Admin CMS is wired up.
+_payload_admin_disabled/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Misc
+payload-types.ts
+
+# Local SQLite dev database
+src/khaithien_v3.db
+*.db
+*.sqlite
+*.sqlite3

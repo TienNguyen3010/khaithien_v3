@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "insights": "Insights",
+    "contact": "Contact"
+  },
+  "cta": {
+    "primary": "Request consultation",
+    "secondary": "View projects",
+    "viewProjects": "View projects",
+    "viewCaseStudies": "View case studies",
+    "readInsights": "Read insights",
+    "startProject": "Start a project",
+    "talkToTeam": "Talk to our team"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "current": "Vietnamese active",
+    "switchTo": "Switch to English"
+  },
+  "home": {
+    "heroEyebrow": "Communication & Entertainment",
+    "heroTitle": "Big thinking. Reliable execution. Measurable outcomes.",
+    "heroBody": "Khải Thiên helps brands connect with audiences through evidence-led activation, events and communication.",
+    "trustStrip": "Trusted by",
+    "servicesTitle": "Our capabilities",
+    "featuredProjectsTitle": "Featured projects",
+    "approachTitle": "How we work",
+    "insightsTitle": "Latest insights",
+    "finalCtaTitle": "Ready to start your project?",
+    "finalCtaBody": "Let's talk so we can propose the right direction for you."
+  },
+  "approach": {
+    "step1Title": "Understand",
+    "step1Body": "We listen to your business goals and brand context.",
+    "step2Title": "Shape",
+    "step2Body": "We design ideas and scenarios that fit your audience.",
+    "step3Title": "Execute",
+    "step3Body": "We deliver with discipline and tight quality control.",
+    "step4Title": "Measure",
+    "step4Body": "We track results and optimise based on data."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Share your needs and we will get back to you as soon as possible.",
+    "name": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone number",
+    "service": "Service of interest",
+    "message": "Tell us about your project",
+    "consent": "I agree to the Privacy Policy",
+    "submit": "Send enquiry",
+    "submitting": "Sending...",
+    "successTitle": "Enquiry received",
+    "successBody": "Thank you. We will be in touch as soon as possible.",
+    "errorTitle": "Could not send your enquiry",
+    "errorBody": "Please check your information or try again later.",
+    "required": "This field is required",
+    "emailInvalid": "Email is invalid",
+    "consentRequired": "You must agree to the Privacy Policy"
+  },
+  "common": {
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you are looking for does not exist or is not published yet.",
+    "backHome": "Back to home",
+    "translationNotice": "The translation of this page is not ready. You have been taken to the home page.",
+    "readMore": "Read more",
+    "viewAll": "View all"
+  },
+  "footer": {
+    "tagline": "Communication & Entertainment",
+    "contactTitle": "Contact",
+    "legalTitle": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© 2026 Khải Thiên Communication & Entertainment"
+  }
+}
