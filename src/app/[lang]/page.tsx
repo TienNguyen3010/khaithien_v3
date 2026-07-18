@@ -43,13 +43,44 @@ export default async function HomePage({
       <section className="section">
         <h2 className="section-title">{dict.home.servicesTitle}</h2>
         <div className="card-grid">
+          <article className="card">
+            <h3>Tổ chức sự kiện trọn gói</h3>
+            <p style={{ color: 'var(--color-muted)' }}>Hội nghị khách hàng, Họp báo, Khai trương, Tiệc Tất niên – Tân niên.</p>
+          </article>
+          <article className="card">
+            <h3>Booking Ca sĩ, Nghệ sĩ, KOLs</h3>
+            <p style={{ color: 'var(--color-muted)' }}>Biểu diễn, Chụp hình, Quảng cáo, Livestream.</p>
+          </article>
+          <article className="card">
+            <h3>Cung cấp nhân sự</h3>
+            <p style={{ color: 'var(--color-muted)' }}>Vũ đoàn, nhóm múa, PG, lễ tân, MC.</p>
+          </article>
+          <article className="card">
+            <h3>Quay / Dựng TVC, Viral clip</h3>
+            <p style={{ color: 'var(--color-muted)' }}>Sản xuất hình ảnh chuyên nghiệp từ kịch bản đến hậu kỳ.</p>
+          </article>
+          <article className="card">
+            <h3>Cho thuê thiết bị sự kiện</h3>
+            <p style={{ color: 'var(--color-muted)' }}>Âm thanh, ánh sáng, màn hình LED và dịch vụ kỹ thuật khác.</p>
+          </article>
           {services.map((s) => (
             <article key={s.id} className="card">
               <h3>{s.title || '—'}</h3>
               <p style={{ color: 'var(--color-muted)' }}>{s.summary || ''}</p>
             </article>
           ))}
-          {services.length === 0 && <p style={{ color: 'var(--color-muted)' }}>{locale === 'vi' ? 'Đang cập nhật dịch vụ.' : 'Services coming soon.'}</p>}
+          {services.length === 0 && <p style={{ color: 'var(--color-muted)' }}>{locale === 'vi' ? 'Liên hệ để nhận tư vấn gói dịch vụ phù hợp.' : 'Contact us for a tailored service package.'}</p>}
+        </div>
+      </section>
+
+      <section className="section" style={{ background: 'var(--color-navy)', color: '#fff', borderRadius: 'var(--radius)' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-12)', alignItems: 'center' }}>
+          <div>
+            <h2 style={{ color: '#fff', margin: '0 0 12px' }}>{locale === 'vi' ? 'Hình ảnh sự kiện thực tế' : 'Real event moments'}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.85)' }}>{locale === 'vi' ? 'Từ khai trương, gala đến sản xuất TVC — Khải Thiên đồng hành cùng thương hiệu từ A – Z.' : 'From grand openings and galas to TVC production — Khải Thiên partners with your brand end to end.'}</p>
+            <Link href={`/${locale}/contact`} className="btn btn-primary" style={{ marginTop: 12 }}>{dict.cta.primary}</Link>
+          </div>
+          <img src="/brand/event-grand-opening.png" alt="Khải Thiên event" style={{ width: '100%', borderRadius: 'var(--radius)' }} />
         </div>
       </section>
 

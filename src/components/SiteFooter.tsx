@@ -7,7 +7,7 @@ export function SiteFooter({
 }: {
   locale: Locale
   dict: {
-    footer: { tagline: string; contactTitle: string; legalTitle: string; privacy: string; terms: string; copyright: string }
+    footer: { tagline: string; contactTitle: string; legalTitle: string; privacy: string; terms: string; copyright: string; phone: string; email: string; address: string; website: string }
     nav: Record<string, string>
   }
 }) {
@@ -15,8 +15,14 @@ export function SiteFooter({
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
+          <img src="/brand/logo.png" alt="Khải Thiên" width={48} height={48} style={{ borderRadius: '50%', background: '#fff', objectFit: 'contain', marginBottom: 8 }} />
+          <br />
           <strong>Khải Thiên</strong>
           <p>{dict.footer.tagline}</p>
+          <p style={{ color: 'rgba(255,255,255,0.85)', margin: '4px 0' }}>{dict.footer.phone}</p>
+          <p style={{ margin: '4px 0' }}><a href={`mailto:${dict.footer.email}`}>{dict.footer.email}</a></p>
+          <p style={{ color: 'rgba(255,255,255,0.7)', margin: '4px 0', maxWidth: 280 }}>{dict.footer.address}</p>
+          <p style={{ margin: '4px 0' }}><a href={dict.footer.website} target="_blank" rel="noopener noreferrer">{dict.footer.website}</a></p>
           <p style={{ color: 'rgba(255,255,255,0.7)' }}>© {dict.footer.copyright}</p>
         </div>
         <nav aria-label="Footer">

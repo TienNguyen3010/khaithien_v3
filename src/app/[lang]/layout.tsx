@@ -13,6 +13,10 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   title: 'Khải Thiên Communication & Entertainment',
   description: 'Big thinking. Reliable execution. Measurable outcomes.',
+  icons: {
+    icon: '/brand/logo.png',
+    apple: '/brand/logo.png',
+  },
 }
 
 export default async function LangLayout({

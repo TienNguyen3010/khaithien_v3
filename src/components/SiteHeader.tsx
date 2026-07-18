@@ -35,7 +35,8 @@ export function SiteHeader({
 }) {
   return (
     <header className="site-header">
-      <Link href={`/${locale}`} className="brand" aria-label="Khải Thiên">
+      <Link href={`/${locale}`} className="brand" aria-label="Khải Thiên Communication & Entertainment">
+        <img src="/brand/logo.png" alt="Khải Thiên Communication & Entertainment" className="brand-logo" width={40} height={38} />
         <strong>Khải Thiên</strong>
       </Link>
       <nav aria-label="Primary">
