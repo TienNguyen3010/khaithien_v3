@@ -4,6 +4,7 @@ import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import sharp from 'sharp'
 import path from 'path'
+import fs from 'fs'
 import { fileURLToPath } from 'url'
 
 import { locales, defaultLocale } from '@/i18n/config'
@@ -52,12 +53,18 @@ export default function buildConfig() {
       outputFile: path.resolve(__dirname, 'payload-types.ts'),
     },
     // Pre-Development Readiness §2: PostgreSQL adapter is the locked production choice.
-    // For local/dev without Postgres, fall back to SQLite on a mounted volume (/data)
-    // so the DB persists outside the container and can be copied between servers.
+    // For local/dev without Postgres, fall back to SQLite.
+    //  - Docker: volume mounts ./data -> /data  (persistent DB)
+    //  - Local: /data may not exist -> fall back to ./khaithien_v3.db in project root
     db: process.env.DATABASE_URL
       ? postgresAdapter({ pool: { connectionString: process.env.DATABASE_URL } })
       : sqliteAdapter({
-          client: { url: 'file:/data/khaithien_v3.db' },
+          client: {
+            url: process.env.SQLITE_FILE
+              || (fs.existsSync('/data')
+                ? 'file:/data/khaithien_v3.db'
+                : 'file:' + path.resolve(__dirname, 'khaithien_v3.db')),
+          },
         }),
     sharp,
     plugins: [],
