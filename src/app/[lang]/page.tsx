@@ -28,13 +28,15 @@ export default async function HomePage({
 
   return (
     <div className="container">
-      <section className="section" style={{ textAlign: 'center', paddingTop: 'var(--space-24)' }}>
-        <p style={{ color: 'var(--color-accent)', fontWeight: 600 }}>{dict.home.heroEyebrow}</p>
-        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', maxWidth: 900, margin: '0 auto 16px' }}>{dict.home.heroTitle}</h1>
-        <p style={{ color: 'var(--color-muted)', maxWidth: 640, margin: '0 auto 24px' }}>{dict.home.heroBody}</p>
-        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href={`/${locale}/contact`} className="btn btn-primary">{dict.cta.primary}</Link>
-          <Link href={`/${locale}/projects`} className="btn btn-secondary">{dict.cta.viewProjects}</Link>
+      <section className="hero">
+        <div className="hero-inner">
+          <p className="hero-eyebrow">{dict.home.heroEyebrow}</p>
+          <h1>{dict.home.heroTitle}</h1>
+          <p className="hero-body">{dict.home.heroBody}</p>
+          <div className="hero-actions">
+            <Link href={`/${locale}/contact`} className="btn btn-primary">{dict.cta.primary}</Link>
+            <Link href={`/${locale}/projects`} className="btn btn-secondary" style={{ color: '#fff', borderColor: '#fff' }}>{dict.cta.viewProjects}</Link>
+          </div>
         </div>
       </section>
 
@@ -51,13 +53,13 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--ice">
         <h2 className="section-title">{dict.home.featuredProjectsTitle}</h2>
         <div className="card-grid">
           {projects.map((p) => (
             <article key={p.id} className="card">
               <h3>{p.title || '—'}</h3>
-              <p style={{ color: 'var(--color-muted)' }}>{p.clientDisplayName || ''} {p.year ? `· ${p.year}` : ''}</p>
+              <p className="meta">{p.clientDisplayName || ''} {p.year ? `· ${p.year}` : ''}</p>
               <Link href={`/${locale}/projects/${p.slug || p.id}`}>{dict.common.readMore}</Link>
             </article>
           ))}

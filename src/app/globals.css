@@ -1,11 +1,17 @@
 :root {
   --container: 1280px;
   --gutter: 24px;
+  /* Khải Thiên brand palette (from brand guideline) */
   --color-bg: #ffffff;
   --color-fg: #111111;
   --color-muted: #555555;
-  --color-accent: #c8102e;
+  --color-navy: #101336;   /* Khải Thiên Navy — primary identity */
+  --color-blue: #0065A9;   /* Khải Thiên Blue — CTA / links / active */
+  --color-cyan: #9ED6E3;   /* Khải Thiên Cyan — accent / hover */
+  --color-ice: #DFF2F8;    /* Khải Thiên Ice — light section/card bg */
+  --color-accent: #0065A9; /* alias -> brand blue */
   --color-accent-fg: #ffffff;
+  --color-on-navy: #ffffff;
   --radius: 8px;
   --space-1: 4px;
   --space-2: 8px;
@@ -42,7 +48,7 @@ a { color: inherit; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--color-accent);
+  background: var(--color-navy);
   color: #fff;
   padding: 8px 16px;
   z-index: 1000;
@@ -62,9 +68,12 @@ a { color: inherit; }
   border: 1px solid transparent;
   min-height: 44px;
 }
-.btn-primary { background: var(--color-accent); color: var(--color-accent-fg); }
+.btn-primary { background: var(--color-blue); color: var(--color-accent-fg); }
+.btn-primary:hover { background: var(--color-navy); }
 .btn-secondary { background: transparent; color: var(--color-fg); border-color: var(--color-fg); }
+.btn-secondary:hover { border-color: var(--color-blue); color: var(--color-blue); }
 
+/* Header — navy bar, white text */
 .site-header {
   display: flex;
   align-items: center;
@@ -73,38 +82,84 @@ a { color: inherit; }
   padding: 16px var(--gutter);
   max-width: var(--container);
   margin: 0 auto;
-  border-bottom: 1px solid #eee;
+  background: var(--color-navy);
 }
+.site-header .brand, .site-header .brand strong { color: var(--color-on-navy); text-decoration: none; }
 .site-nav { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center; }
-.site-nav a { text-decoration: none; color: var(--color-fg); }
+.site-nav a { text-decoration: none; color: var(--color-on-navy); opacity: 0.85; }
+.site-nav a:hover { opacity: 1; color: var(--color-cyan); }
 .lang-switch { display: inline-flex; gap: 4px; align-items: center; }
-.lang-switch a { text-decoration: none; padding: 4px 8px; border-radius: 6px; }
-.lang-switch a.active { font-weight: 700; color: var(--color-accent); }
+.lang-switch a { text-decoration: none; padding: 4px 8px; border-radius: 6px; color: var(--color-on-navy); opacity: 0.8; }
+.lang-switch a.active { font-weight: 700; color: var(--color-cyan); opacity: 1; }
+
+/* Hero — navy background with brand image */
+.hero {
+  position: relative;
+  color: var(--color-on-navy);
+  background: var(--color-navy);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/brand/hero.png") center/cover no-repeat;
+  opacity: 0.28;
+}
+.hero-inner {
+  position: relative;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-24) var(--gutter);
+  text-align: center;
+}
+.hero-eyebrow { color: var(--color-cyan); font-weight: 600; margin: 0 0 12px; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); max-width: 900px; margin: 0 auto 16px; color: #fff; }
+.hero-body { color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto 24px; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 .section { padding: var(--space-16) 0; }
 .section-title { font-size: 1.75rem; margin: 0 0 var(--space-8); }
+.section--ice { background: var(--color-ice); }
 
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6); }
-.card { border: 1px solid #eee; border-radius: var(--radius); padding: var(--space-6); }
-.card h3 { margin: 0 0 8px; }
+.card { border: 1px solid #eee; border-radius: var(--radius); padding: var(--space-6); background: #fff; }
+.card h3 { margin: 0 0 8px; color: var(--color-navy); }
+.card .meta { color: var(--color-blue); font-size: 0.875rem; }
 
-.site-footer { border-top: 1px solid #eee; padding: var(--space-12) 0; margin-top: var(--space-16); }
+/* Footer — navy */
+.site-footer {
+  border-top: 1px solid var(--color-navy);
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+  padding: var(--space-12) 0;
+  margin-top: var(--space-16);
+}
+.site-footer a { color: var(--color-on-navy); opacity: 0.85; text-decoration: none; }
+.site-footer a:hover { color: var(--color-cyan); opacity: 1; }
 .footer-grid { display: flex; flex-wrap: wrap; gap: var(--space-12); justify-content: space-between; }
+.footer-grid h4 { color: var(--color-cyan); margin: 0 0 12px; }
+.footer-grid ul { list-style: none; margin: 0; padding: 0; }
+.footer-grid li { margin-bottom: 6px; }
 
 .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-4); }
 .form-field label { font-weight: 600; }
 .form-field input, .form-field textarea, .form-field select {
   padding: 10px 12px; border: 1px solid #ccc; border-radius: var(--radius); font: inherit;
 }
-.form-field .error { color: var(--color-accent); font-size: 0.875rem; }
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus {
+  outline: 2px solid var(--color-blue); border-color: var(--color-blue);
+}
+.form-field .error { color: #b3261e; font-size: 0.875rem; }
 
 .alert { padding: 12px 16px; border-radius: var(--radius); margin-bottom: var(--space-4); }
-.alert-success { background: #e6f4ea; color: #1e6b34; }
+.alert-success { background: var(--color-ice); color: var(--color-navy); border: 1px solid var(--color-cyan); }
 .alert-error { background: #fdecea; color: #b3261e; }
 
 @media (max-width: 768px) {
   .site-nav { gap: 12px; flex-wrap: wrap; }
   .section { padding: var(--space-12) 0; }
+  .hero-inner { padding: var(--space-16) var(--gutter); }
 }
 
 @media (prefers-reduced-motion: reduce) {

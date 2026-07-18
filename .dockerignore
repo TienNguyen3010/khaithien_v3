@@ -1,0 +1,16 @@
+node_modules
+.next
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+data
+*.db
+*.sqlite
+*.sqlite3
+payload-types.ts
+.DS_Store
+logs
+*.log
+cloudflared

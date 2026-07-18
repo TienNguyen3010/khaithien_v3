@@ -17,7 +17,7 @@ export function SiteFooter({
         <div>
           <strong>Khải Thiên</strong>
           <p>{dict.footer.tagline}</p>
-          <p style={{ color: 'var(--color-muted)' }}>© {dict.footer.copyright}</p>
+          <p style={{ color: 'rgba(255,255,255,0.7)' }}>© {dict.footer.copyright}</p>
         </div>
         <nav aria-label="Footer">
           <h4>{dict.footer.contactTitle}</h4>

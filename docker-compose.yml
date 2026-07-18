@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: khaithien_v3:latest
+    container_name: khaithien_v3
+    # Map host port 3000 -> container 3000 (change left side to e.g. 80 if needed)
+    ports:
+      - "3000:3000"
+    environment:
+      # Needed for Payload session/token encryption — override in .env on the server
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET:-change-me-to-a-long-random-secret}
+      # Leave EMPTY to use SQLite on the mounted /data volume.
+      # For production with Postgres, set the full connection string here.
+      DATABASE_URL: ${DATABASE_URL:-}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+    volumes:
+      # Persist SQLite DB + runtime data outside the container
+      - ./data:/data
+    restart: unless-stopped

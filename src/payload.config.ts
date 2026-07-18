@@ -52,12 +52,12 @@ export default function buildConfig() {
       outputFile: path.resolve(__dirname, 'payload-types.ts'),
     },
     // Pre-Development Readiness §2: PostgreSQL adapter is the locked production choice.
-    // For local dev sandbox without a running Postgres, fall back to SQLite so the
-    // app boots and tests run. Staging/production must supply DATABASE_URL.
+    // For local/dev without Postgres, fall back to SQLite on a mounted volume (/data)
+    // so the DB persists outside the container and can be copied between servers.
     db: process.env.DATABASE_URL
       ? postgresAdapter({ pool: { connectionString: process.env.DATABASE_URL } })
       : sqliteAdapter({
-          client: { url: 'file:' + path.resolve(__dirname, 'khaithien_v3.db') },
+          client: { url: 'file:/data/khaithien_v3.db' },
         }),
     sharp,
     plugins: [],
